@@ -13,7 +13,7 @@ class Login extends Component
     public $remember_me = false;
 
     protected $rules = [
-        'email' => 'required|email:rfc,dns',
+        'email' => 'required|email',
         'password' => 'required|min:6',
     ];
 
@@ -21,7 +21,17 @@ class Login extends Component
     public function mount()
     {
         if (auth()->user()) {
-            return redirect()->intended('/dashboard');
+            if (auth()->user()->role == 'admin') {
+                return redirect()->intended('/dashboard');
+            }
+            elseif (auth()->user()->role == 'engineer') {
+                return redirect()->intended('/');
+            }
+            elseif (auth()->user()->role == 'user') {
+                return redirect()->intended('/');
+            }
+
+            return redirect()->intended('/');
         }
       
     }
@@ -32,7 +42,15 @@ class Login extends Component
         if (auth()->attempt(['email' => $this->email, 'password' => $this->password], $this->remember_me)) {
             $user = User::where(['email' => $this->email])->first();
             auth()->login($user, $this->remember_me);
-            return redirect()->intended('/dashboard');
+            if ($user->role == 'admin') {
+                return redirect()->intended('/dashboard');
+            }
+            elseif ($user->role == 'engineer') {
+                return redirect()->intended('/engineer');
+            }
+            elseif ($user->role == 'user') {
+                return redirect()->intended('/');
+            }
         } else {
             return $this->addError('email', trans('auth.failed'));
         }

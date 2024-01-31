@@ -15,7 +15,7 @@ class Engineers extends Component
     public function render()
     {
         $engineers = Engineer::all();
-        return view('livewire.engineers.engineers', compact('engineers'));
+        return view('livewire.admin.engineers.engineers', compact('engineers'));
         
     }
 

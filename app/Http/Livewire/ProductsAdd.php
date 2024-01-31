@@ -20,7 +20,7 @@ class ProductsAdd extends Component
 
 
     public function render(){
-        return view('livewire.products.add_new');
+        return view('livewire.admin.products.add_new');
     }
 
     public function add()

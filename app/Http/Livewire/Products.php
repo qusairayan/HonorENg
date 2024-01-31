@@ -15,7 +15,7 @@ class Products extends Component
     public function render()
     {
         $products = Product::all();
-        return view('livewire.products.products', compact('products'));
+        return view('livewire.admin.products.products', compact('products'));
         
     }
 

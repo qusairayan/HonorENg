@@ -2,8 +2,7 @@
     @if(request()->route()->getName() == 'index')
 {{$slot}}
 @endif
-
-    @if(in_array(request()->route()->getName(), ['dashboard', 'products.products','products.add',  'projects.projects','projects.add', 'engineers.engineers','engineers.add', 'profile', 'profile-example', 'users', 'bootstrap-tables', 'transactions',
+    @if(in_array(request()->route()->getName(), ['dashboard', 'products.products','products.add',  'projects.projects','projects.add', 'engineers.engineers','engineers.add','user.bookings', 'profile', 'profile-example', 'users', 'bootstrap-tables', 'transactions',
     'buttons',
     'forms', 'modals', 'notifications', 'typography', 'upgrade-to-pro']))
 

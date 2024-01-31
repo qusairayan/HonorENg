@@ -19,6 +19,8 @@ class Engineer extends Model
         'address',
         'email',
         'password',
+        'rate',
+        'rate_count',
 
     ];
 }

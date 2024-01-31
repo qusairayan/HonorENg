@@ -22,6 +22,8 @@ class CreateEngineersTable extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('address');
+            $table->double('rate');
+            $table->integer('rate_count');
             $table->timestamps();
         });
     }

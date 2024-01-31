@@ -5,19 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Project extends Model
+class Booking extends Model
 {
     use HasFactory;
-    protected $table = 'projects';
+    protected $table = 'bookings';
      
 
     protected $fillable = [
-        'title',
-        'description',        
-        'image',
-        'number',
+        'user_id',
+        'engineer_id',        
+        'status',
+        'rate',
         'date',
-        'client',
-        'type',
+        
     ];
 }

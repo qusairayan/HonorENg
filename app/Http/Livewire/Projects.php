@@ -16,7 +16,7 @@ class Projects extends Component
     {
         $projectTypes = Project::distinct()->pluck('type');
         $projects = Project::all();
-        return view('livewire.projects.projects', compact('projects','projectTypes'));
+        return view('livewire.admin.projects.projects', compact('projects','projectTypes'));
         
     }
 

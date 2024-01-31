@@ -23,7 +23,7 @@ class ProjectsAdd extends Component
 
 
     public function render(){
-        return view('livewire.projects.add_new');
+        return view('livewire.admin.projects.add_new');
     }
 
     public function add()

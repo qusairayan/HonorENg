@@ -6,6 +6,7 @@ use Livewire\Component;
 use Illuminate\Http\Request; 
 use Illuminate\Support\Facades\Storage;
 use App\Models\Engineer;
+use App\Models\User;
 use Livewire\WithFileUploads; 
 use Illuminate\Support\Facades\Hash;
 
@@ -23,7 +24,7 @@ class EngineersAdd extends Component
     public $password = '';
 
     public function render(){
-        return view('livewire.engineers.add_new');
+        return view('livewire.admin.engineers.add_new');
     }
 
     public function add()
@@ -41,14 +42,27 @@ class EngineersAdd extends Component
 
         $this->image->storeAs('engineers', $image_name, 'public');
 
+        $user=User::create([
+            'first_name' => $this->name,
+            'address' => $this->address,
+            'email' => $this->email,
+            'role' => 'engineer',
+            'password' => Hash::make($this->password),
+         
+        ]);
+
+
+        
         Engineer::create([
             'name' => $this->name,
+            'user_id' => $user->id,
             'phone' => $this->phone,
             'description' => $this->description,
             'image' => $image_name,
             'address' => $this->address,
             'email' => $this->email,
             'password' => Hash::make($this->password),
+
          
         ]);
 
