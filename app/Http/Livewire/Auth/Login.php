@@ -46,7 +46,7 @@ class Login extends Component
                 return redirect()->intended('/dashboard');
             }
             elseif ($user->role == 'engineer') {
-                return redirect()->intended('/engineer');
+                return redirect()->intended('/profile');
             }
             elseif ($user->role == 'user') {
                 return redirect()->intended('/');
