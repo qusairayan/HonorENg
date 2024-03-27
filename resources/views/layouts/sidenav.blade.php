@@ -24,7 +24,7 @@
                         <img src="/assets/img/brand/light-svg.png" height="20" width="20" alt="Volt Logo">
                     </span>
                     <span class="mt-1 ms-1 sidebar-text">
-                        Honor Dashboard
+                        اونر
                     </span>
                 </a>
             </li>
@@ -38,7 +38,7 @@
                                 <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
                                 <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
                             </svg></span></span>
-                        <span class="sidebar-text">Dashboard</span>
+                        <span class="sidebar-text">لوحة القيادة</span>
                     </a>
                 </li>
 
@@ -52,7 +52,7 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </span>
-                        <span class="sidebar-text">Products</span>
+                        <span class="sidebar-text">الخدمات</span>
                     </a>
                 </li>
 
@@ -66,7 +66,7 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </span>
-                        <span class="sidebar-text">Project</span>
+                        <span class="sidebar-text">المشاريع</span>
                     </a>
                 </li>
 

@@ -31,6 +31,7 @@ class EngineersAdd extends Component
     {
         $this->validate([
             'name' => 'required',
+            'email' => 'required|unique:users|unique:engineers',
             'description' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'phone' => 'required',
@@ -43,7 +44,7 @@ class EngineersAdd extends Component
         $this->image->storeAs('engineers', $image_name, 'public');
 
         $user=User::create([
-            'first_name' => $this->name,
+            'name' => $this->name,
             'address' => $this->address,
             'email' => $this->email,
             'role' => 'engineer',

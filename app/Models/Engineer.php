@@ -12,6 +12,7 @@ class Engineer extends Model
      
 
     protected $fillable = [
+        'user_id',
         'name',
         'description',        
         'image',
