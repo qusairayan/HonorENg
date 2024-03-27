@@ -152,7 +152,7 @@
                                 src="/assets/img/team/avatar.png">
                             <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
                                 <span
-                                    class="mb-0 font-small fw-bold text-gray-900">{{ auth()->user()->first_name ? auth()->user()->name : 'Admin' }}</span>
+                                    class="mb-0 font-small fw-bold text-gray-900">{{ auth()->user()->name ? auth()->user()->name : 'Admin' }}</span>
                             </div>
                         </div>
                     </a>
