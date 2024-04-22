@@ -16,8 +16,7 @@ class Profile extends Component
     public function rules() {
 
         return [
-            'user.first_name' => 'max:15',
-            'user.last_name' => 'max:20',
+            'user.name' => 'max:15',
             'user.email' => 'email',
             'user.gender' => ['required', Rule::in(['Male', 'Female', 'Other'])],
             'user.address' => 'max:40',

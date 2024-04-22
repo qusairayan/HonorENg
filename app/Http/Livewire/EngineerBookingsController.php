@@ -13,7 +13,7 @@ class EngineerBookingsController extends Component
 
     public function render()
     {
-        $bookings = Booking::select('bookings.id', 'bookings.status', 'bookings.rate', 'bookings.created_at', 'users.first_name as user_name')
+        $bookings = Booking::select('bookings.id', 'bookings.status', 'bookings.rate', 'bookings.created_at', 'users.name as user_name')
             ->leftjoin('users', 'users.id', '=', 'bookings.user_id')
             ->where('engineer_id', auth()->user()->id)->get();
 
