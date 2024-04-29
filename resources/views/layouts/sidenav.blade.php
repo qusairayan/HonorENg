@@ -81,7 +81,7 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </span>
-                        <span class="sidebar-text">Engineers</span>
+                        <span class="sidebar-text">المهندسين</span>
                     </a>
                 </li>
             @endif
