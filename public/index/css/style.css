@@ -445,6 +445,11 @@ animation-delay: .8s;
   border-width: 2px;
   font-size: 36px;
   color:#292929;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 #about-us h5 a {
   color:#292929;
@@ -1133,6 +1138,10 @@ animation-delay: .8s;
   line-height: 60px;
   color: #fff;
   font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 #contact-section .contact-address-content .left-side ul li:hover .icon {
   background: #fff;

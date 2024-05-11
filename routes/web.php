@@ -7,6 +7,7 @@ use App\Http\Livewire\Components\Modals;
 use App\Http\Livewire\Components\Notifications;
 use App\Http\Livewire\Components\Typography;
 use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\SettingController;
 use App\Http\Livewire\Err404;
 use App\Http\Livewire\Err500;
 use App\Http\Livewire\ResetPassword;
@@ -79,6 +80,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/forgot-password-example', ForgotPasswordExample::class)->name('forgot-password-example');
     Route::get('/reset-password-example', ResetPasswordExample::class)->name('reset-password-example');
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    Route::get('/setting', SettingController::class)->name('setting');
 
     Route::group(['prefix' => 'products', 'as' => 'products.'], function () {
         Route::get('/', Products::class)->name('products');

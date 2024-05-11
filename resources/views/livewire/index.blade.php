@@ -25,6 +25,8 @@
       <script src="/index/vendor/html5shiv.js"></script>
       <script src="/index/vendor/respond.js"></script>
     <![endif]-->
+
+
     </head>
 
     <body>
@@ -67,9 +69,9 @@
      </ul>
        </li> -->
                                 <li><a href="#contact-section">تواصل معنا</a></li>
-                                <li><a href="{{auth()->user()? route('profile'):route('login') }}">
+                                <li><a href="{{ auth()->user() ? route('profile') : route('login') }}">
                                         <i class="fa fa-user" aria-hidden="true"></i>
-                                         {{auth()->user()?"الملف الشخصي" :"تسجيل الدخول" }}
+                                        {{ auth()->user() ? 'الملف الشخصي' : 'تسجيل الدخول' }}
                                     </a></li>
                             </ul>
                         </div>
@@ -632,8 +634,8 @@
                                         <img src="/index/images/team/eng.jpg" alt="Image" />
                                         <div class="opacity tran4s">
                                             <h4>{{ $engineer->name }}</h4>
-											<br>
-											<br>
+                                            <br>
+                                            <br>
                                             <p>{{ $engineer->rate }} <i class="fa fa-star"
                                                     style="color: goldenrod"></i>
                                             </p>
@@ -665,7 +667,7 @@
                         @endforeach
                         <!-- /.single-team-member -->
 
-                        
+
 
                         <!-- /float-left -->
 
@@ -786,60 +788,18 @@
                             <div class="theme-title">
                                 <h2>عملائنا</h2>
                                 <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem Ipsum has been the industry's standard dummy text
-                                    ever since the 1500s, when an unknown printer took a galley of
-                                    type.
-                                </p>
+                                
                             </div>
-                            <!-- /.theme-title -->
-
-                            <div class="client-slider">
-                                <div class="item">
-                                    <img src="/index/images/home/c1.jpg" alt="Client" />
-                                    <p>
-                                        Our successful construction approach is based on aggressive
-                                        subcontractor administration, employ-ment of competent
-                                        personnel, accurate schedule control, quality control and cost
-                                        control. We employ only qualified subcontractors who share our
-                                        goal in creating quality projects.
-                                    </p>
-                                    <h6>- Spryte Loriano -</h6>
-                                </div>
-                                <!-- /.item -->
-                                <div class="item">
-                                    <img src="/index/images/home/c2.jpg" alt="Client" />
-                                    <p>
-                                        Our successful construction approach is based on aggressive
-                                        subcontractor administration, employ-ment of competent
-                                        personnel, accurate schedule control, quality control and cost
-                                        control. We employ only qualified subcontractors who share our
-                                        goal in creating quality projects.
-                                    </p>
-                                    <h6>- Spryte Loriano -</h6>
-                                </div>
-                                <!-- /.item -->
-                                <div class="item">
-                                    <img src="/index/images/home/c3.jpg" alt="Client" />
-                                    <p>
-                                        Our successful construction approach is based on aggressive
-                                        subcontractor administration, employ-ment of competent
-                                        personnel, accurate schedule control, quality control and cost
-                                        control. We employ only qualified subcontractors who share our
-                                        goal in creating quality projects.
-                                    </p>
-                                    <h6>- Spryte Loriano -</h6>
-                                </div>
-                                <!-- /.item -->
-                            </div>
-                            <!-- /.client-slider -->
+                            
                         </div>
                         <!-- /.container -->
                     </div>
                     <!-- /#our-client -->
 
 
-                    <div id="partner-section">
+                    <div id="partner-section w-100">
+
+                        <br>
                         <div class="container">
                             <div id="partner_logo" class="owl-carousel owl-theme">
                                 <div class="item"><img src="/index/images/logo/p1.png" alt="logo" /></div>
@@ -866,16 +826,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <div class="left-side">
                                         <h2>تواصل معنا</h2>
-                                        <p>
-                                            There are many variations of passages of Lorem Ipsum
-                                            available, but the majori have suffered alteration in some
-                                            form, by injected humour, or randomised words which don't look
-                                            even slightly believable. If you are going to use a pas of
-                                            Lorem Ipsum, you need to be sure there isn't anything
-                                            embarrassing hidden in the middle of text. <br /><br />
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                            do eiusmod tempor ididunt ut labore et dolore magna aliqua.
-                                        </p>
+                                        
 
                                         <ul>
                                             <li>
@@ -917,67 +868,252 @@
                             <!-- /.contact-address-content -->
 
                             <!-- Contact Form -->
-                            <div class="send-message">
-                                <h2>ارسل لرسالة</h2>
 
-                                <form action="inc/sendemail.php" class="form-validation" autocomplete="off"
-                                    method="post">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="single-input">
-                                                <input type="text" placeholder="الأسم الأخير*" name="Fname" />
+                            <div class="row" style="display: flex; align-items:center">
+                                <div class="send-message col-lg-6">
+                                    <h2>ارسل رسالة</h2>
+
+                                    <form action="inc/sendemail.php" class="form-validation" autocomplete="off"
+                                        method="post">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="single-input">
+                                                    <input type="text" placeholder="الأسم الأخير*"
+                                                        name="Fname" />
+                                                </div>
+                                                <!-- /.single-input -->
                                             </div>
-                                            <!-- /.single-input -->
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="single-input">
+                                                    <input type="text" placeholder="الأسم الأول*"
+                                                        name="Lname" />
+                                                </div>
+                                                <!-- /.single-input -->
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                <div class="single-input">
+                                                    <input type="email" placeholder="Your Email*" name="email" />
+                                                </div>
+                                                <!-- /.single-input -->
+                                            </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="single-input">
-                                                <input type="text" placeholder="الأسم الأول*" name="Lname" />
-                                            </div>
-                                            <!-- /.single-input -->
+                                        <!-- /.row -->
+                                        <div class="single-input">
+                                            <input type="text" placeholder="الموضوع" name="sub" />
                                         </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                            <div class="single-input">
-                                                <input type="email" placeholder="Your Email*" name="email" />
+                                        <!-- /.single-input -->
+                                        <textarea placeholder="الرسالة" name="message"></textarea>
+
+                                        <button class="tran3s p-color-bg">أرسل</button>
+                                    </form>
+
+                                    <!-- Contact Form Validation Markup -->
+                                    <!-- Contact alert -->
+                                    <div class="alert-wrapper" id="alert-success">
+                                        <div id="success">
+                                            <button class="closeAlert">
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="wrapper">
+                                                <p>تم الأرسال بنجاح.</p>
                                             </div>
-                                            <!-- /.single-input -->
                                         </div>
                                     </div>
-                                    <!-- /.row -->
-                                    <div class="single-input">
-                                        <input type="text" placeholder="الموضوع" name="sub" />
-                                    </div>
-                                    <!-- /.single-input -->
-                                    <textarea placeholder="الرسالة" name="message"></textarea>
-
-                                    <button class="tran3s p-color-bg">أرسل</button>
-                                </form>
-
-                                <!-- Contact Form Validation Markup -->
-                                <!-- Contact alert -->
-                                <div class="alert-wrapper" id="alert-success">
-                                    <div id="success">
-                                        <button class="closeAlert">
-                                            <i class="fa fa-times" aria-hidden="true"></i>
-                                        </button>
-                                        <div class="wrapper">
-                                            <p>تم الأرسال بنجاح.</p>
+                                    <!-- End of .alert_wrapper -->
+                                    <div class="alert-wrapper" id="alert-error">
+                                        <div id="error">
+                                            <button class="closeAlert">
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="wrapper">
+                                                <p>هنالك خطأ.</p>
+                                            </div>
                                         </div>
                                     </div>
+                                    <!-- End of .alert_wrapper -->
                                 </div>
-                                <!-- End of .alert_wrapper -->
-                                <div class="alert-wrapper" id="alert-error">
-                                    <div id="error">
-                                        <button class="closeAlert">
-                                            <i class="fa fa-times" aria-hidden="true"></i>
-                                        </button>
-                                        <div class="wrapper">
-                                            <p>هنالك خطأ.</p>
+                                <!-- /.send-message -->
+
+
+
+                                <div class="col-lg-6 p-5">
+                                    <div class="commonninja_component pid-b6b53590-b223-419c-88c7-c38f5c598586 hid-7J7EAk"
+                                        style="transition: all 0.2s ease 0s; display: initial; display: flex; justify-content: flex-end;">
+                                        <div class="sc-fqkvVR guDfJD plugin-wrapper widget-b6b53590-b223-419c-88c7-c38f5c598586 viewer desktop"
+                                            style="font-family: Poppins, sans-serif;">
+                                            <style>
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 {
+                                                    padding: 0;
+                                                    margin: 0;
+                                                    border: 0;
+                                                    outline: 0;
+                                                    font-size: 100%;
+                                                    font: inherit;
+                                                    font-family: "Poppins", sans-serif;
+                                                    vertical-align: baseline;
+                                                    background: transparent;
+                                                    line-height: 1.3;
+                                                    font-size: 14px;
+                                                    max-width: 100%;
+                                                }
+
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 * {
+                                                    box-sizing: border-box;
+                                                }
+
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 div:empty,
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 span:empty,
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 a:empty {
+                                                    display: inherit;
+                                                }
+
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 .center {
+                                                    text-align: center;
+                                                }
+
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 a:focus {
+                                                    outline: 0;
+                                                }
+
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 b,
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 strong {
+                                                    font-weight: bold;
+                                                }
+
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 i,
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 em {
+                                                    font-style: italic;
+                                                }
+
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 *:focus {
+                                                    outline: 0;
+                                                }
+
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 ins {
+                                                    text-decoration: none;
+                                                }
+
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 del {
+                                                    text-decoration: line-through;
+                                                }
+
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 blockquote,
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 q {
+                                                    quotes: none;
+                                                }
+
+                                                .widget-b6b53590-b223-419c-88c7-c38f5c598586 a {
+                                                    text-decoration: none;
+                                                }
+
+                                                .pc-row-wrapper {
+                                                    display: flex;
+                                                    flex-direction: row;
+                                                    align-items: center;
+                                                    justify-content: space-between;
+                                                }
+                                            </style>
+                                            <div class="sc-brPLxw fGIkvA pl-wrapper"
+                                                style="--border-radius: 3; width: 500px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.086) 0px 0px 10px 0px; border-radius: 3px; border: none;">
+                                                <div class="sc-cmaqmh jxfQle ph-title"
+                                                    style="font-size: 28px; font-weight: 600; text-align:center; line-height: 1; justify-content: center; padding: 10px;">
+                                                    ساعات العمل</div>
+                                                <div class="sc-kAkpmW jgexBZ nb-wrapper"
+                                                    style="font-size: 20px; font-weight: 500; text-align:center; color: white; background-color:#00cdff; justify-content: center; padding: 10px;">
+                                                    الأوقات بتوقيت الرياض</div>
+                                                <div class="sc-ggpjZQ jmhKxY pc-content-wrapper layout-default"
+                                                    style="font-size: 22px; font-weight: 500; line-height: 1;">
+                                                    <div class="pc-row-wrapper "
+                                                        style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
+                                                        <div><span>الاحد</span></div>
+                                                        <div class="pc-hours-wrapper">
+                                                            @if(!$sunday->off_day)
+                                                            <span>{{$sunday->time_from}} - {{$sunday->time_to}}</span>
+                                                            @else
+                                                            <span>مغلق</span>
+                                                            @endif
+                                                        </div>
+                                                        </div>
+                                                    <div class="pc-row-wrapper pc-today-row"
+                                                        style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
+                                                        <div><span>الأثنين</span>
+                                                        </div>
+                                                        <div class="pc-hours-wrapper">
+                                                            @if(!$monday->off_day)
+                                                            <span>{{$monday->time_from}} - {{$monday->time_to}}</span>
+                                                            @else
+                                                            <span>مغلق</span>
+                                                            @endif
+                                                        </div>
+                                                        </div>
+                                                    <div class="pc-row-wrapper "
+                                                        style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
+                                                        <div><span>الثلاثاء</span></div>
+                                                        <div class="pc-hours-wrapper">
+                                                            @if(!$tuseday->off_day)
+                                                            <span>{{$tuseday->time_from}} - {{$tuseday->time_to}}</span>
+                                                            @else
+                                                            <span>مغلق</span>
+                                                            @endif
+                                                        </div>
+                                                        </div>
+                                                    <div class="pc-row-wrapper "
+                                                        style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
+                                                        <div><span>الأربعاء</span></div>
+                                                        <div class="pc-hours-wrapper">
+                                                            @if(!$wednseday->off_day)
+                                                            <span>{{$wednseday->time_from}} - {{$wednseday->time_to}}</span>
+                                                            @else
+                                                            <span>مغلق</span>
+                                                            @endif
+                                                        </div>
+                                                        </div>
+                                                    <div class="pc-row-wrapper "
+                                                        style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
+                                                        <div><span>الخميس</span></div>
+                                                        <div class="pc-hours-wrapper">
+                                                            @if(!$thurseday->off_day)
+                                                            <span>{{$thurseday->time_from}} - {{$thurseday->time_to}}</span>
+                                                            @else
+                                                            <span>مغلق</span>
+                                                            @endif
+                                                        </div>
+                                                        </div>
+                                                    <div class="pc-row-wrapper "
+                                                        style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
+                                                        <div><span>الجمعة</span></div>
+                                                        <div class="pc-hours-wrapper">
+                                                            @if(!$friday->off_day)
+                                                            <span>{{$friday->time_from}} - {{$friday->time_to}}</span>
+                                                            @else
+                                                            <span>مغلق</span>
+                                                            @endif
+                                                        </div>
+                                                        </div>
+                                                    <div class="pc-row-wrapper "
+                                                        style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
+                                                        <div><span>السبت</span></div>
+                                                        <div class="pc-hours-wrapper">
+                                                            @if(!$saturday->off_day)
+                                                            <span>{{$saturday->time_from}} - {{$saturday->time_to}}</span>
+                                                            @else
+                                                            <span>مغلق</span>
+                                                            @endif
+                                                        </div>
+                                                        </div>
+                                                </div>
+
+                                            </div>
                                         </div>
+
                                     </div>
+
                                 </div>
-                                <!-- End of .alert_wrapper -->
+
+
+
+
                             </div>
-                            <!-- /.send-message -->
                         </div>
                         <!-- /.container -->
                     </div>
