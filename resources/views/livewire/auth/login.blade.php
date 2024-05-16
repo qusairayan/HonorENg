@@ -1,5 +1,5 @@
 <main>
-    <title>Volt Laravel Dashboard - Sign In page</title>
+    <title>Honor Dashboard Dashboard - Sign In page</title>
     <!-- Section -->
     <section class="login-bg vh-lg-100 mt-5 mt-lg-0 bg-soft d-flex align-items-center" data-background-lg="/assets/img/illustrations/signin-svg.svg">
         <div class="container">

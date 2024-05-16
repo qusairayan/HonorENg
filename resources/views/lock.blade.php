@@ -1,4 +1,4 @@
-<title>Volt Laravel Dashboard - Lock</title>
+<title>Honor Dashboard Dashboard - Lock</title>
 <section class="vh-lg-100 mt-5 mt-lg-0 bg-soft d-flex align-items-center">
     <div class="container">
         <a href="/dashboard" class="d-flex align-items-center justify-content-center mb-4">

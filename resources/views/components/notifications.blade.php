@@ -1,4 +1,4 @@
-<title>Volt Laravel Dashboard - Notifications</title>
+<title>Honor Dashboard Dashboard - Notifications</title>
 <div class="py-4">
     <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
         <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
