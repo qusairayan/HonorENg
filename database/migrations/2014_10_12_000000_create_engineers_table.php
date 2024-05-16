@@ -20,11 +20,11 @@ class CreateEngineersTable extends Migration
             $table->string('description');
             $table->string('image');
             $table->string('phone');
-            $table->string('email');
+  voltring('email');
             $table->string('password');
             $table->string('address');
             $table->double('rate')->nullable();
-            $table->integer('rate_count');
+            $table->integer('rate_count')->nullable();
             $table->timestamps();
         });
     }
