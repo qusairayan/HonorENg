@@ -15,6 +15,7 @@ class CreateEngineersTable extends Migration
     {
         Schema::create('engineers', function (Blueprint $table) {
             $table->increments('id')->unique();
+            $table->integer('user_id');
             $table->string('name');
             $table->string('description');
             $table->string('image');
@@ -22,7 +23,7 @@ class CreateEngineersTable extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('address');
-            $table->double('rate');
+            $table->double('rate')->nullable();
             $table->integer('rate_count');
             $table->timestamps();
         });

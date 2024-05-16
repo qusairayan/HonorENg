@@ -24,7 +24,7 @@
 
     {{ $slot }}
     {{-- Footer --}}
-    @include('layouts.footer2')
+    {{-- @include('layouts.footer2') --}}
 
 
     @elseif(in_array(request()->route()->getName(), ['404', '500', 'lock']))

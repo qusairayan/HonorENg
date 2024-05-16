@@ -1,9 +1,8 @@
 <main>
 
-    <form wire:submit.prevent="add" method="POST" enctype="multipart/form-data">
+    <form wire:submit.prevent="add" enctype="multipart/form-data">
 
 
-@csrf
 
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
 

@@ -43,6 +43,7 @@ class ProjectsAdd extends Component
 
         $this->image->storeAs('projects', $image_name, 'public');
 
+        
         Project::create([
             'name' => $this->name,
             'title' => $this->title,

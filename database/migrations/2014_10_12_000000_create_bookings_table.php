@@ -17,7 +17,6 @@ class CreatebookingsTable extends Migration
             $table->increments('id')->unique();
             $table->integer('user_id');
             $table->integer('engineer_id');
-            $table->integer('status');
             $table->string('status');
             $table->date('date')->default(now());
             $table->timestamps();

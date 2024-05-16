@@ -35,7 +35,8 @@
                             <div class="align-items-center card shadow border-0 text-center p-0">
                                 <div class="col-sm-10 mb-3">
                                     <label for="formFile" class="form-label">رفع صورة المشروع</label>
-                                    <input class="form-control" type="file" id="image" wire:model="image">
+                                    <input class="form-control" type="file" id="image" accept="image/png, image/gif, image/jpeg"
+                                     wire:model="image">
                                     @error('image')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -79,6 +80,18 @@
 
                         <div class="col-md-5 mb-3">
                             <div>
+                                <label for="type">النوع</label>
+                                <input class="form-control" id="type" type="text"
+                                    placeholder="أدخل نوع المشروع" wire:model="type" autofocus required>
+                                @error('type')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4 mb-3">
+                            <div>
                                 <label for="client">العميل</label>
                                 <input class="form-control" id="client" type="text"
                                     placeholder="أدخل اسم العميل" wire:model="client" autofocus required>
@@ -88,7 +101,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-5 mb-3">
+                        <div class="col-md-4 mb-3">
                             <div>
                                 <label for="date">التاريخ</label>
                                 <input class="form-control" id="date" type="date"
@@ -99,7 +112,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-5 mb-3">
+                        <div class="col-md-3 mb-3">
                             <div>
                                 <label for="number">الرقم</label>
                                 <input class="form-control" id="number" type="number"

@@ -100,7 +100,7 @@ Route::middleware('auth')->group(function () {
     });
 
     // Route::get('/projects', Projects::class)->name('projects');
-
+    
 
     Route::get('/transactions', Transactions::class)->name('transactions');
     Route::get('/bootstrap-tables', BootstrapTables::class)->name('bootstrap-tables');
