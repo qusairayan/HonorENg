@@ -1,4 +1,4 @@
-<main>
+<div>
 
     <form wire:submit.prevent="add" enctype="multipart/form-data">
 
@@ -17,34 +17,34 @@
                     <div class="row ">
                         <div class="col-12 mb-4">
                             <div class="align-items-center card shadow border-0 text-center p-0">
-    
-    
+
+
                                 <div class="col-sm-10 mb-3 ">
                                     <label for="formFile" class="form-label">تحميل صورة المهندس</label>
                                     <input class="form-control" type="file" id="image" wire:model="image">
                                     @error('image')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
-    
+
                                 </div>
                                 <!-- End of Form -->
                             </div>
                         </div>
                     </div>
- 
+
                     <div class="row">
 
                         <div class="col-md-6 mb-3">
                             <div>
                                 <label for="name">الاسم</label>
-                                <input class="form-control" id="name" type="text"
-                                    placeholder="أدخل اسم المهندس" wire:model="name" autofocus required>
+                                <input class="form-control" id="name" type="text" placeholder="أدخل اسم المهندس"
+                                    wire:model="name" autofocus required>
                                 @error('name')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
                         </div>
-                     
+
 
                         <div class="col-md-5 mb-3">
                             <div>
@@ -104,24 +104,24 @@
                                 @enderror
                             </div>
                         </div>
-                      
-                       
-                        
+
+
+
 
 
                     </div>
 
 
-                   
 
 
-                 
 
 
-                   
 
 
-                   
+
+
+
+
 
 
 
@@ -136,9 +136,9 @@
 
 
 
-           
-            
+
+
         </div>
-        </div>
+
     </form>
-</main>
+</div>
