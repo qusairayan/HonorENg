@@ -30,11 +30,12 @@ class ProductsAdd extends Component
             'product_name' => 'required',
             'product_title' => 'required',
             'product_description' => 'required',
-            'product_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'product_image' => 'nullable|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'product_number' => 'required',
         ]);
 
-
+        $image_name = '';
+        if( $this->product_image){
         $image_name = time() . '.' . $this->product_image->extension();
 
         $this->product_image->storeAs('products', $image_name, 'public');
@@ -43,12 +44,13 @@ class ProductsAdd extends Component
         $image_name = time() . '.' . $this->product_image->extension();
 
         $this->product_image->storeAs('products', $image_name, 'public');
+        }
 
         Product::create([
             'name' => $this->product_name,
             'title' => $this->product_title,
             'description' => $this->product_description,
-            'image' => $image_name,
+            'image' => $image_name?? null,
             'number' => $this->product_number,
         ]);
         $this->reset(['product_name', 'product_title', 'product_description', 'product_image', 'product_number']);

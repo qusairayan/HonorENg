@@ -61,7 +61,7 @@
                                 <!-- <li><a href="#project-section">PORTFOLIO</a></li> -->
                                 <li><a href="#team-section">الفريق</a></li>
                                 <li><a href="#project-section">الحلول</a></li>
-                                <li><a href="#our-client">العملاء</a></li>
+                                {{-- <li><a href="#our-client">العملاء</a></li> --}}
                                 <!-- <li><a href="#pricing-section">Pricing</a></li> -->
                                 <!-- <li class="dropdown-holder"><a href="#blog-section">BLOG</a> -->
                                 <!-- <ul class="sub-menu">
@@ -519,6 +519,28 @@
             </div>
             <!-- /#service-section -->
 
+
+
+
+
+
+
+            <div id="">
+                <div class="container">
+                    <div class="theme-title">
+                        <h2>نسبة التقارير التي تم العمل عليها</h2>
+
+                    </div>
+
+                    <div style="margin-top:4.0rem">
+                        <canvas id="ChartCanvas" width="400" height="100" aria-label="Hello ARIA World"
+                            role="img"></canvas>
+                    </div>
+
+                </div>
+            </div>
+
+
             <!--
    =====================================================
     Project Section
@@ -783,14 +805,14 @@
     Our Client
    =====================================================
    -->
-                    <div id="our-client">
+                    {{-- <div id="our-client">
                         <div class="container">
                             <div class="theme-title">
                                 <h2>عملائنا</h2>
                                 <p>
-                                
+
                             </div>
-                            
+
                         </div>
                         <!-- /.container -->
                     </div>
@@ -812,7 +834,7 @@
                             <!-- End .partner_logo -->
                         </div>
                         <!-- /.container -->
-                    </div>
+                    </div> --}}
                     <!-- /#partner-section -->
 
                     <!--
@@ -826,7 +848,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <div class="left-side">
                                         <h2>تواصل معنا</h2>
-                                        
+
 
                                         <ul>
                                             <li>
@@ -1027,80 +1049,87 @@
                                                         style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
                                                         <div><span>الاحد</span></div>
                                                         <div class="pc-hours-wrapper">
-                                                            @if(!$sunday->off_day)
-                                                            <span>{{$sunday->time_from}} - {{$sunday->time_to}}</span>
+                                                            @if (!$sunday->off_day)
+                                                                <span>{{ $sunday->time_from }} -
+                                                                    {{ $sunday->time_to }}</span>
                                                             @else
-                                                            <span>مغلق</span>
+                                                                <span>مغلق</span>
                                                             @endif
                                                         </div>
-                                                        </div>
+                                                    </div>
                                                     <div class="pc-row-wrapper pc-today-row"
                                                         style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
                                                         <div><span>الأثنين</span>
                                                         </div>
                                                         <div class="pc-hours-wrapper">
-                                                            @if(!$monday->off_day)
-                                                            <span>{{$monday->time_from}} - {{$monday->time_to}}</span>
+                                                            @if (!$monday->off_day)
+                                                                <span>{{ $monday->time_from }} -
+                                                                    {{ $monday->time_to }}</span>
                                                             @else
-                                                            <span>مغلق</span>
+                                                                <span>مغلق</span>
                                                             @endif
                                                         </div>
-                                                        </div>
+                                                    </div>
                                                     <div class="pc-row-wrapper "
                                                         style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
                                                         <div><span>الثلاثاء</span></div>
                                                         <div class="pc-hours-wrapper">
-                                                            @if(!$tuseday->off_day)
-                                                            <span>{{$tuseday->time_from}} - {{$tuseday->time_to}}</span>
+                                                            @if (!$tuseday->off_day)
+                                                                <span>{{ $tuseday->time_from }} -
+                                                                    {{ $tuseday->time_to }}</span>
                                                             @else
-                                                            <span>مغلق</span>
+                                                                <span>مغلق</span>
                                                             @endif
                                                         </div>
-                                                        </div>
+                                                    </div>
                                                     <div class="pc-row-wrapper "
                                                         style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
                                                         <div><span>الأربعاء</span></div>
                                                         <div class="pc-hours-wrapper">
-                                                            @if(!$wednseday->off_day)
-                                                            <span>{{$wednseday->time_from}} - {{$wednseday->time_to}}</span>
+                                                            @if (!$wednseday->off_day)
+                                                                <span>{{ $wednseday->time_from }} -
+                                                                    {{ $wednseday->time_to }}</span>
                                                             @else
-                                                            <span>مغلق</span>
+                                                                <span>مغلق</span>
                                                             @endif
                                                         </div>
-                                                        </div>
+                                                    </div>
                                                     <div class="pc-row-wrapper "
                                                         style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
                                                         <div><span>الخميس</span></div>
                                                         <div class="pc-hours-wrapper">
-                                                            @if(!$thurseday->off_day)
-                                                            <span>{{$thurseday->time_from}} - {{$thurseday->time_to}}</span>
+                                                            @if (!$thurseday->off_day)
+                                                                <span>{{ $thurseday->time_from }} -
+                                                                    {{ $thurseday->time_to }}</span>
                                                             @else
-                                                            <span>مغلق</span>
+                                                                <span>مغلق</span>
                                                             @endif
                                                         </div>
-                                                        </div>
+                                                    </div>
                                                     <div class="pc-row-wrapper "
                                                         style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
                                                         <div><span>الجمعة</span></div>
                                                         <div class="pc-hours-wrapper">
-                                                            @if(!$friday->off_day)
-                                                            <span>{{$friday->time_from}} - {{$friday->time_to}}</span>
+                                                            @if (!$friday->off_day)
+                                                                <span>{{ $friday->time_from }} -
+                                                                    {{ $friday->time_to }}</span>
                                                             @else
-                                                            <span>مغلق</span>
+                                                                <span>مغلق</span>
                                                             @endif
                                                         </div>
-                                                        </div>
+                                                    </div>
                                                     <div class="pc-row-wrapper "
                                                         style="padding: 10px 15px; border-bottom: 0px solid black; color: rgb(0, 0, 0);">
                                                         <div><span>السبت</span></div>
                                                         <div class="pc-hours-wrapper">
-                                                            @if(!$saturday->off_day)
-                                                            <span>{{$saturday->time_from}} - {{$saturday->time_to}}</span>
+                                                            @if (!$saturday->off_day)
+                                                                <span>{{ $saturday->time_from }} -
+                                                                    {{ $saturday->time_to }}</span>
                                                             @else
-                                                            <span>مغلق</span>
+                                                                <span>مغلق</span>
                                                             @endif
                                                         </div>
-                                                        </div>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -1142,6 +1171,39 @@
                     <button class="scroll-top tran3s p-color-bg">
                         <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
                     </button>
+
+
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                    <script>
+                        const ctx = document.getElementById('ChartCanvas');
+
+                        new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: [' مخالففة المعايير الهندسية', 'تقدير الأعمال المنجزة', 'تقدير أضرار المباني',
+                                    'ابداء الرأي الفني', 'تقارير مضادة'
+                                ],
+                                datasets: [{
+                                    barThickness: 30 ,
+                                    minBarLength: 15,
+                                    label: '',
+                                    data: [45, 15, 65, 30, 3, 100],
+                                    borderColor: '#00cdff',
+                                    backgroundColor: '#232a34',
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    type: 'logarithmic',
+                                    position: 'right', //
+                                }
+                            }
+                        });
+                    </script>
+
+
 
                     <!-- Include jQuery -->
                     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
