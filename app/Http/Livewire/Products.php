@@ -22,7 +22,9 @@ class Products extends Component
 
     public function delete($product){
         $product = Product::find($product);
+        if($product){
         $product->delete();
+        }
         return redirect()->route('products.products');
     }
 

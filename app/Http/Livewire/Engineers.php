@@ -21,7 +21,8 @@ class Engineers extends Component
 
     public function delete($engineer){
         $engineer = engineer::find($engineer);
-        $engineer->delete();
+        if($engineer){
+        $engineer->delete();}
         return redirect()->route('engineers.engineers');
     }
 
