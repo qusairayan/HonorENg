@@ -32,23 +32,24 @@ class ProjectsAdd extends Component
             'name' => 'required',
             'title' => 'required',
             'description' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'number' => 'required',
             'date' => 'required|date',
             'client' => 'required',
             'type' => 'required',
         ]);
-
+        $image_name ='';
+        if($this->image){
         $image_name = time() . '.' . $this->image->extension();
 
         $this->image->storeAs('projects', $image_name, 'public');
+        }
 
         
         Project::create([
             'name' => $this->name,
             'title' => $this->title,
             'description' => $this->description,
-            'image' => $image_name,
+            'image' => $image_name??null,
             'number' => $this->number,
             'date' => $this->date,
             'client' => $this->client,
@@ -59,6 +60,6 @@ class ProjectsAdd extends Component
 return redirect()->route('projects.projects');
     }
 
-    
+ 
 
 }

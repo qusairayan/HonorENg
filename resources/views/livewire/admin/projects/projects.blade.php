@@ -27,6 +27,7 @@
                     <th class="border-gray-200">العميل</th>
                     <th class="border-gray-200">التاريخ</th>
                     <th class="border-gray-200">الرقم</th>
+                    <th class="border-gray-200"></th>
                 </tr>
             </thead>
             <tbody>
@@ -66,6 +67,11 @@
                             <span class="fw-normal">
                                 {{ $project->number }}
                             </span>
+                        </td>
+                        <td>
+                            <a class="btn action-btn btn--danger btn-outline-danger" href="{{ route('projects.delete', $project->id) }}" title="delete offer">
+                                <i class="fas fa-trash"></i>
+                            </a>
                         </td>
                     </tr>
                 @endforeach

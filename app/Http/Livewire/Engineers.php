@@ -19,4 +19,10 @@ class Engineers extends Component
         
     }
 
+    public function delete($engineer){
+        $engineer = engineer::find($engineer);
+        $engineer->delete();
+        return redirect()->route('engineers.engineers');
+    }
+
 }

@@ -20,4 +20,9 @@ class Projects extends Component
         
     }
 
+    public function delete($project){
+        $project = Project::find($project);
+        $project->delete();
+        return redirect()->route('projects.projects');
+    }
 }

@@ -85,18 +85,23 @@ Route::middleware('auth')->group(function () {
     Route::group(['prefix' => 'products', 'as' => 'products.'], function () {
         Route::get('/', Products::class)->name('products');
         Route::get('/add', ProductsAdd::class, 'add')->name('add');
+        Route::get('/delete/{product}', [Products::class, 'delete'])->name('delete');
+
     });
 
 
     Route::group(['prefix' => 'projects', 'as' => 'projects.'], function () {
         Route::get('/', Projects::class)->name('projects');
         Route::get('/add', ProjectsAdd::class, 'add')->name('add');
+        Route::get('/delete/{project}', [Projects::class, 'delete'])->name('delete');
     });
 
 
     Route::group(['prefix' => 'engineers', 'as' => 'engineers.'], function () {
         Route::get('/', Engineers::class)->name('engineers');
         Route::get('/add', EngineersAdd::class, 'add')->name('add');
+        Route::get('/delete/{engineer}', [Engineers::class, 'delete'])->name('delete');
+
     });
 
     // Route::get('/projects', Projects::class)->name('projects');

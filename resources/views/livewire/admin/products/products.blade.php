@@ -58,6 +58,14 @@
                                 {{ $product->number }}
                             </span>
                         </td>
+
+
+                        <td>
+                            <a class="btn action-btn btn--danger btn-outline-danger" href="{{ route('products.delete', $product->id) }}" title="delete product">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+
                     </tr>
                 @endforeach
             </tbody>

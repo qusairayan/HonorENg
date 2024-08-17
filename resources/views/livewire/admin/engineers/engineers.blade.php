@@ -55,6 +55,13 @@
                         <td class="border-0 fw-bold">
                             <span class="fw-normal">{{ $engineer->phone }}</span>
                         </td>
+
+
+                        <td>
+                            <a class="btn action-btn btn--danger btn-outline-danger" href="{{ route('engineers.delete', $engineer->id) }}" title="delete engineer">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

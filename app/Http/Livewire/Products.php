@@ -19,4 +19,11 @@ class Products extends Component
         
     }
 
+
+    public function delete($product){
+        $product = Product::find($product);
+        $product->delete();
+        return redirect()->route('products.products');
+    }
+
 }

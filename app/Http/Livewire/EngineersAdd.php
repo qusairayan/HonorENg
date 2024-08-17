@@ -33,16 +33,17 @@ class EngineersAdd extends Component
             'name' => 'required',
             'email' => 'required|unique:users|unique:engineers',
             'description' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'phone' => 'required',
             'address' => 'required',
             'password' => 'required',
         ]);
 
+        $image_name = '';
+        if($this->image){
         $image_name = time() . '.' . $this->image->extension();
 
         $this->image->storeAs('engineers', $image_name, 'public');
-
+        }
         $user=User::create([
             'name' => $this->name,
             'address' => $this->address,
@@ -59,7 +60,7 @@ class EngineersAdd extends Component
             'user_id' => $user->id,
             'phone' => $this->phone,
             'description' => $this->description,
-            'image' => $image_name,
+            'image' => $image_name??null,
             'address' => $this->address,
             'email' => $this->email,
             'password' => Hash::make($this->password),
