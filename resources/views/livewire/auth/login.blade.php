@@ -54,7 +54,9 @@
                                 <div class="d-flex justify-content-between align-items-top mb-4">
                                   
                                     <div><a href="{{ route('forgot-password') }}" class="small text-right">Lost
-                                            password?</a></div>
+                                        password?</a></div>
+
+                                        <div><a href="{{ route('register') }}" class="small text-right">Dont Have Account?</a></div>
                                 </div>
                             </div>
                             <div class="d-grid">
