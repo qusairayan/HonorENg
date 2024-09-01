@@ -13,12 +13,31 @@
                             <form wire:submit.prevent="register" action="#" method="POST">
                                 <!-- Form -->
                                 <div class="form-group mt-4 mb-4">
+                                    <label for="name">Your name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon3"><svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg></span>
+                                        <input wire:model="name" id="name" type="text" class="form-control" placeholder="your name" autofocus required>
+                                    </div>
+                                    @error('email') <div class="invalid-feedback"> {{ $message }} </div> @enderror 
+                                </div>
+
+                                <div class="form-group mt-4 mb-4">
                                     <label for="email">Your Email</label>
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon3"><svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg></span>
                                         <input wire:model="email" id="email" type="email" class="form-control" placeholder="example@company.com" autofocus required>
                                     </div>
                                     @error('email') <div class="invalid-feedback"> {{ $message }} </div> @enderror 
+                                </div>
+
+
+                                <div class="form-group mt-4 mb-4">
+                                    <label for="phone">Your phone</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon3"><svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg></span>
+                                        <input wire:model="phone" id="phone" type="phone" class="form-control" placeholder="+961*********" autofocus required>
+                                    </div>
+                                    @error('phone') <div class="invalid-feedback"> {{ $message }} </div> @enderror 
                                 </div>
                                 <!-- End of Form -->
                                 <div class="form-group">

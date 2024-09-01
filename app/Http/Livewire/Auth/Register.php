@@ -11,6 +11,8 @@ class Register extends Component
 {
 
     public $email = '';
+    public $name = '';
+    public $phone = '';
     public $password = '';
     public $passwordConfirmation = '';
 
@@ -29,11 +31,15 @@ class Register extends Component
     public function register()
     {
         $this->validate([
+            'phone' => 'required',
+            'name' => 'required',
             'email' => 'required',
             'password' => 'required|same:passwordConfirmation|min:6',
         ]);
 
         $user = User::create([
+            'name' =>$this->name,
+            'phone' =>$this->email,
             'email' =>$this->email,
             'password' => Hash::make($this->password),
             'remember_token' => Str::random(10),
