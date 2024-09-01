@@ -22,7 +22,7 @@
                                             </svg>
                                         </span>                                        <input wire:model="name" id="name" type="text" class="form-control" placeholder="your name" autofocus required>
                                     </div>
-                                    @error('email') <div class="invalid-feedback"> {{ $message }} </div> @enderror 
+                                    @error('name') <div class="invalid-feedback"> {{ $message }} </div> @enderror 
                                 </div>
 
                                 <div class="form-group mt-4 mb-4">
