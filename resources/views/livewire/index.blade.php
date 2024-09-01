@@ -674,7 +674,7 @@
                                         <p>{{ $engineer->description }}</p>
                                         <div wire:ignore>
                                             <button class="project-button hvr-bounce-to-right"
-                                                wire:click="bookEngineer({{ $engineer->user_id }})"
+                                                wire:click="bookEngineer({{ $engineer->id }})"
                                                 style="border: 1px solid #4b5fc0c2;
 												  border-radius: 5px;
 												  padding: 0.6rem;
