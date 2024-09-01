@@ -47,7 +47,6 @@ class Index extends Component
         Booking::create(['user_id'=>auth()->user()->id,'engineer_id'=>$id]);
 
         $engineer = Engineer::find($id);
-        dd($engineer);
 
         $mailData = [
             'title' => 'لقد حصلت على حجز جديد من HONORECC.COM',
