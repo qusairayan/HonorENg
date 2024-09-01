@@ -805,7 +805,7 @@
     Our Client
    =====================================================
    -->
-                    {{-- <div id="our-client">
+                     <div id="our-client">
                         <div class="container">
                             <div class="theme-title">
                                 <h2>عملائنا</h2>
@@ -824,17 +824,19 @@
                         <br>
                         <div class="container">
                             <div id="partner_logo" class="owl-carousel owl-theme">
-                                <div class="item"><img src="/index/images/logo/p1.png" alt="logo" /></div>
-                                <div class="item"><img src="/index/images/logo/p2.png" alt="logo" /></div>
-                                <div class="item"><img src="/index/images/logo/p3.png" alt="logo" /></div>
-                                <div class="item"><img src="/index/images/logo/p4.png" alt="logo" /></div>
-                                <div class="item"><img src="/index/images/logo/p5.png" alt="logo" /></div>
-                                <div class="item"><img src="/index/images/logo/p2.png" alt="logo" /></div>
+                                <div class="item"><img  src="/index/images/partneres/1.png" alt="logo" /></div>
+                                <div class="item"><img  src="/index/images/partneres/2.png" alt="logo" /></div>
+                                <div class="item"><img  src="/index/images/partneres/3.png" alt="logo" /></div>
+                                <div class="item"><img  src="/index/images/partneres/4.jpg" alt="logo" /></div>
+                                <div class="item"><img  src="/index/images/partneres/5.png" alt="logo" /></div>
+                                <div class="item"><img  src="/index/images/partneres/6.svg" alt="logo" /></div>
+                                <div class="item"><img  src="/index/images/partneres/7.svg" alt="logo" /></div>
+                                <div class="item"><img  src="/index/images/partneres/8.svg" alt="logo" /></div>
                             </div>
                             <!-- End .partner_logo -->
                         </div>
                         <!-- /.container -->
-                    </div> --}}
+                    </div> 
                     <!-- /#partner-section -->
 
                     <!--
