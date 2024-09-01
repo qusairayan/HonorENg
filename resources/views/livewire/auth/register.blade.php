@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
                                 <div class="d-grid">
-                                    <button type="submit" class="btn btn-gray-800">Sign in</button>
+                                    <button type="submit" class="btn btn-gray-800">Register</button>
                                 </div>
                             </form>
                             <div class="mt-3 mb-4 text-center">
