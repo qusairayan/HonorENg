@@ -1,5 +1,7 @@
  <main>
     <title>Honor Dashboard Dashboard - Sign Up page</title>
+    <link rel="stylesheet" type="text/css" href="/index/css/style.css" />
+    
         <!-- Section -->
         <section class="vh-lg-100 mt-5 mt-lg-0 bg-soft d-flex align-items-center">
             <div class="container">
