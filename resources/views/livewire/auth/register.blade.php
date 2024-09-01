@@ -1,6 +1,5 @@
  <main>
     <title>Honor Dashboard Dashboard - Sign Up page</title>
-    <link rel="stylesheet" type="text/css" href="/index/css/style.css" />
     
         <!-- Section -->
         <section class="vh-lg-100 mt-5 mt-lg-0 bg-soft d-flex align-items-center">
@@ -17,8 +16,11 @@
                                 <div class="form-group mt-4 mb-4">
                                     <label for="name">Your Name</label>
                                     <div class="input-group">
-                                        <span class="input-group-text" id="basic-addon3"> <i class="fa fa-user" aria-hidden="true"></i></span>
-                                        <input wire:model="name" id="name" type="text" class="form-control" placeholder="your name" autofocus required>
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 10a4 4 0 100-8 4 4 0 000 8zm0 2a6 6 0 00-6 6h12a6 6 0 00-6-6z"></path>
+                                            </svg>
+                                        </span>                                        <input wire:model="name" id="name" type="text" class="form-control" placeholder="your name" autofocus required>
                                     </div>
                                     @error('email') <div class="invalid-feedback"> {{ $message }} </div> @enderror 
                                 </div>
@@ -36,8 +38,11 @@
                                 <div class="form-group mt-4 mb-4">
                                     <label for="phone">Your phone</label>
                                     <div class="input-group">
-                                        <span class="input-group-text" id="basic-addon3"><svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg></span>
-                                        <input wire:model="phone" id="phone" type="phone" class="form-control" placeholder="+961*********" autofocus required>
+                                        <span class="input-group-text" id="basic-addon2">
+                                            <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2 4.994V4a2 2 0 012-2h12a2 2 0 012 2v.994a2 2 0 01-1.85 1.995 17.896 17.896 0 00-.177 1.527c.002.5.007 1.002.015 1.506.009.56.017 1.128.029 1.7C16.034 13.388 15.88 14.192 14.942 14.5c-.49.157-.878.42-1.263.782l-.192.183a18.936 18.936 0 01-3.937-2.764c-.68-.698-1.31-1.356-2.05-2.17a18.936 18.936 0 01-2.764-3.937l.183-.192c.362-.385.625-.773.782-1.263.308-.938 1.111-1.092 1.547-.955.573.012 1.142.02 1.7.029.504.008 1.006.013 1.506.015a17.896 17.896 0 001.527-.177 2 2 0 011.995-1.85z"></path>
+                                            </svg>
+                                        </span>                                        <input wire:model="phone" id="phone" type="phone" class="form-control" placeholder="+961*********" autofocus required>
                                     </div>
                                     @error('phone') <div class="invalid-feedback"> {{ $message }} </div> @enderror 
                                 </div>
