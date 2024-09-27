@@ -22,7 +22,7 @@ class Engineers extends Component
 
     public function delete($engineer){
         $engineer = engineer::find($engineer);
-        $user = User::find('email',$engineer->email);
+        $user = User::where('email',$engineer->email);
         if($engineer){
             $engineer->delete();}
 
