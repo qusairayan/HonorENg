@@ -6,6 +6,7 @@ use Livewire\Component;
 use Illuminate\Http\Request; // Import Request class
 use Illuminate\Support\Facades\Storage;
 use App\Models\Engineer;
+use App\Models\User;
 
 
 class Engineers extends Component
@@ -21,8 +22,12 @@ class Engineers extends Component
 
     public function delete($engineer){
         $engineer = engineer::find($engineer);
+        $user = User::find('email',$engineer->email);
         if($engineer){
-        $engineer->delete();}
+            $engineer->delete();}
+
+            if($user){
+                $user->delete();}
         return redirect()->route('engineers.engineers');
     }
 
