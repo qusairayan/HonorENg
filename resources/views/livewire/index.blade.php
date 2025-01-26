@@ -872,7 +872,7 @@
                                                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
                                                 </div>
                                                 <h6>البريد الإلكتروني</h6>
-                                                <p>backpiper.com@gmail.com</p>
+                                                <p>info@honorecc.com</p>
                                             </li>
                                         </ul>
                                     </div>
